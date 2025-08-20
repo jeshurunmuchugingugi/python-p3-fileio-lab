@@ -1,8 +1,18 @@
 def write_file(file_name, file_content):
-    pass
+    with open(f'{file_name}.txt', 'w') as f:
+        f.write(file_content)
+write_file(file_name="logfile", file_content="Log 1: 5 bananas added" )
+pass
 
 def append_file(file_name, append_content):
-    pass
+    with open(f'{file_name}.txt', 'a') as f:
+        f.write(append_content)
+        pass
+append_file(file_name="logfile", append_content="Log 2: 3 bananas subtracted")
+
 
 def read_file(file_name):
-    pass
+    with open(f'{file_name}.txt', 'r', encoding="utf-8") as f:
+        return  f.read()
+        pass
+read_file(file_name="logfile")
